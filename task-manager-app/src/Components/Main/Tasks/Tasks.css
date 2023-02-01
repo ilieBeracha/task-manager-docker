@@ -1,0 +1,196 @@
+.Tasks {
+    width: 100%;
+    min-height: 100%;
+}
+
+.TasksList {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.TasksDiv {
+    min-width: 30%;
+    height: 95%;
+    border-radius: 5px;
+}
+
+.TasksDivTitle {
+    display: flex;
+    justify-content: center;
+    color: var(--color3);
+    align-items: center;
+    width: 80%;
+    height: 5%;
+    margin: 0 auto;
+}
+
+.TasksHeader {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    box-sizing: border-box;
+    /* border-bottom: 2px solid var(--color4); */
+    display: flex;
+    align-items: center;
+}
+
+.ShowOrHideImagesDiv{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.ShowOrHideImagesDiv button{
+    background-color: var(--color2);
+    border: none;
+    color: var(--color3);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.TasksHeader .search-container {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.TasksHeader .search-container input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px 0 0 5px;
+}
+
+.TasksHeader .search-container button[type="submit"] {
+    border: none;
+    outline: none;
+    background-color: rgb(147, 139, 139);
+    color: #fff;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.TasksHeader .search-container button[type="submit"]:hover {
+    background-color: #333;
+}
+
+.TasksHeader .search-container button[type="submit"]:active {
+    background-color: #666;
+}
+
+
+.TasksDivTitle h5 {
+    margin: 0;
+}
+
+.TasksDisplayed {
+    /* padding-left: 20px; */
+    width: 100%;
+    height: 95%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    box-sizing: border-box;
+    /* scrollbar-gutter: inherit; */
+    overflow: auto;
+}
+
+
+.dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.dotTodo {
+    background-color: orange;
+
+}
+
+.dotInProgress {
+    background-color: #A75CDA;
+}
+
+.dotCompleted {
+    background-color: #40CC80;
+}
+
+@media screen and (max-width: 1200px) {
+    .TasksList {
+        /* display: flex; */
+        height: 90%;
+        width: 100%;
+        /* flex-direction: row; */
+    }
+
+    .Tasks {
+        height: 100%;
+        /* display: flex; */
+    }
+
+    .TasksHeader {
+        height: 10%;
+    }
+
+    .TasksDiv {
+        padding-left: 10px;
+        width: 90%;
+        height: 30%;
+        /* height: 300px; */
+    }
+
+    .TasksDivTitle {
+        height: 20px;
+    }
+
+    .TasksDisplayedOver3{
+        /* height: 100%; */
+        height: 90%;
+        /* padding-left: 10px; */
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        gap: 20px;
+        margin: 0;
+        /* padding: 0; */
+        flex-direction: row;
+        display: flex;
+        /* overflow-x: scroll; */
+        overflow-y: hidden;
+    }
+
+    .TasksDisplayed {
+        /* height: 100%; */
+        height: 90%;
+        padding-left: 10px;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        gap: 20px;
+        margin: 0;
+        /* padding: 0; */
+        flex-direction: row;
+        display: flex;
+        /* overflow-x: scroll; */
+        overflow-y: hidden;
+    }
+
+    .ShowOrHideImagesDiv{
+        display: none;
+    }
+}

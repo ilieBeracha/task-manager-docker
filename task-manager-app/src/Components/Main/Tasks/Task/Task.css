@@ -1,0 +1,193 @@
+.Task {
+  position: relative;
+  /* width: 60%; */
+  width: 280px;
+  /* min-height: 130px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+  background-color: var(--color6);
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  padding-right: 35px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-top: 15px;
+  font-family: 'Roboto', sans-serif;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.Task:hover {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.TaskName {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.TaskContent {
+  margin-top: 8px;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.TaskDate {
+  font-size: 0.8em;
+  color: gray;
+}
+
+.Task h5 {
+  margin: 0;
+}
+
+.editTaskDiv {
+  color: var(--color2);
+}
+
+.eraseTaskDiv,
+.editTaskDiv,
+.addImageDiv {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+
+.eraseTaskDiv {
+  top: 5px;
+}
+
+.editTaskDiv {
+  top: 30px;
+}
+
+.addImageDiv{
+  top: 55px;
+}
+
+.eraseTaskDiv:hover,
+.editTaskDiv:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.eraseTaskDiv:active,
+.editTaskDiv:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.TaskPriorityDiv {
+  position: absolute;
+  height: 10%;
+  /* width: 100%; */
+  bottom: 10px;
+  right: 10px;
+  z-index: 2;
+  /* background-color: yellow; */
+  padding: 3px;
+  border-radius: 20%;
+  /* display: ; */
+
+}
+
+.TaskImage{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.TaskImage img{
+  border-radius: 10px;
+  width: 200px;
+  height: 120px;
+}
+
+.TaskLabel {
+  /* position: absolute;
+  top: -10px;
+  left: -10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  width: max-content;
+  /* border-radius: 50%; */
+  padding: 2px;
+  font-size: 12px;
+}
+
+#remainingDaySpanOver0{
+  font-weight:300;
+  color: var(--color3);
+}
+#remainingDaySpanUnder0{
+  font-weight:300;
+  color: red;
+}
+
+.TaskLabelWork {
+  background-color: var(--workLabel);
+  color: var(--color6);
+}
+
+.TaskLabelPersonal {
+  background-color: var(--personalLabel);
+  /* opacity: 0.7; */
+  color: var(--color6);
+}
+
+.TaskLabelHome {
+  background-color: var(--homeLabel);
+  color: var(--color6);
+}
+
+.TaskLabelSchool {
+  background-color: var(--schoolLabel);
+  color: var(--color6);
+}
+
+.TaskLabelFinancial {
+  background-color: var(--financialLabel);
+  color: var(--color6);
+}
+
+.TaskLabelLeisure {
+  background-color: var(--leisureLabel);
+  color: var(--color6);
+
+}
+
+@media screen and (max-width: 1200px) {
+  .Task {
+    min-width: 250px;
+    min-height: 180px;
+    margin: 0;
+  }
+
+  .TaskImage{
+    display: none;
+  }
+
+  .addImageDiv{
+    display: none;
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .Task {
+    min-width: 180px;
+    min-height: 100px;
+    margin: 0;
+    font-size: 12px;
+  }
+
+}

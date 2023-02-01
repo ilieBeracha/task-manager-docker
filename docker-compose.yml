@@ -1,0 +1,21 @@
+services:
+  task-manager-server:
+    image: task-manager-server
+    ports:
+      - 3080:3080
+    build: ./task-manager-nodejs
+
+  task-manager-client:
+    image: task-manager-client
+    ports:
+       - 3000:3000
+    build: ./task-manager-app
+
+  task-manager-db:
+    image: task-manager-db
+    ports:
+      - 3307:3306
+    build: ./task-manager-db
+    environment:
+      MYSQL_ROOT_PASSWORD: 97649Bb97649Bb
+      MYSQL_DATABASE: task_manager
